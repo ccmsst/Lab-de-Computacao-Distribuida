@@ -92,7 +92,7 @@ def main():
         print(f"📊 Total de processos MPI: {size}")
         print(f"⏰ Início: {time.strftime('%H:%M:%S')}")
         
-        # Gerar logs (500.000 ou 1.000.000)
+        # Gerar 500.000 logs
         TOTAL_LOGS = 500_000
         print(f"📝 Gerando {TOTAL_LOGS:,} logs simulados...")
         
