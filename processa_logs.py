@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 """
 Processamento Distribuído de Logs com MPI
-Autor: [Seu Nome]
+Autor: Camila Huang
+RA: 10419606
 Descrição: Programa para processar logs de forma distribuída usando MPI Scatter
 """
 
