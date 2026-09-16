@@ -1,7 +1,7 @@
 import threading
 import random
 import time
-N = 300
+N = 1000
 THREADS = 4
 A = [[random.random() for _ in range(N)] for _ in range(N)]
 B = [[random.random() for _ in range(N)] for _ in range(N)]
@@ -24,4 +24,7 @@ for t in range(THREADS):
 for th in threads:
     th.join()
 fim = time.time()
+
+print(f"N = {N}")
+
 print(f"Tempo com threads: {(fim - inicio) * 1000:.2f} ms")
