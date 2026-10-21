@@ -18,7 +18,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# URL do Serviço Coordenador
+# URL do Serviço Coordenadorr
 COORDENADOR_URL = "http://localhost:3000"
 
 class Agendamento(db.Model):
