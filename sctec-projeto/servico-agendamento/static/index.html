@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SCTEC - Agendamento</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f9; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
+        button { background: #007bff; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px; }
+        button:hover { background: #0056b3; }
+        pre { background: #eee; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🛰️ SCTEC - Painel do Cientista</h2>
+        <p><strong>Hora Local:</strong> <span id="local-time">--</span></p>
+        <p><strong>Hora Servidor (Sincronizada):</strong> <span id="server-time">--</span></p>
+        
+        <hr>
+        <h3>Agendar Observação</h3>
+        <button onclick="agendar()">Solicitar Horário (03:00 UTC)</button>
+        <pre id="resultado">Aguardando ação...</pre>
+    </div>
+
+    <script>
+        // Usa caminhos relativos, pois o HTML é servido pelo próprio Flask
+        const API_BASE = ""; 
+        let offset = 0;
+
+        // Algoritmo de Cristian para Sincronização
+        async function sincronizarTempo() {
+            try {
+                const t0 = Date.now();
+                const response = await fetch(`${API_BASE}/time`);
+                const data = await response.json();
+                const t1 = Date.now();
+                
+                const serverTime = new Date(data.server_time_utc).getTime();
+                const rtt = t1 - t0;
+                offset = (serverTime + (rtt / 2)) - t1;
+                
+                console.log(`Sincronizado! RTT: ${rtt}ms, Offset: ${offset}ms`);
+            } catch (error) {
+                console.error("Erro ao sincronizar tempo:", error);
+            }
+        }
+
+        // Atualiza o relógio na tela
+        setInterval(() => {
+            const agora = Date.now();
+            document.getElementById('local-time').innerText = new Date(agora).toISOString();
+            document.getElementById('server-time').innerText = new Date(agora + offset).toISOString();
+        }, 100);
+
+        // Função para Agendar
+        async function agendar() {
+            const resultado = document.getElementById('resultado');
+            resultado.innerText = "Enviando requisição...";
+            
+            const payload = {
+                telescopio_id: 1,
+                cientista_id: 99,
+                horario_inicio_utc: "2025-12-01T03:00:00Z"
+            };
+
+            try {
+                const response = await fetch(`${API_BASE}/agendamentos`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const data = await response.json();
+                resultado.innerText = JSON.stringify(data, null, 2);
+
+                if (response.status === 201 && data._links && data._links.cancelar) {
+                    const linkCancelar = data._links.cancelar.href;
+                    resultado.innerHTML += `\n\n<a href="#" onclick="cancelar('${linkCancelar}'); return false;">❌ Cancelar este agendamento (HATEOAS)</a>`;
+                }
+
+            } catch (error) {
+                resultado.innerText = "Erro ao conectar no servidor: " + error;
+            }
+        }
+
+        // Função para Cancelar usando HATEOAS
+        async function cancelar(url) {
+            const resultado = document.getElementById('resultado');
+            resultado.innerText = "Cancelando...";
+            
+            try {
+                const response = await fetch(`${API_BASE}${url}`, { method: 'DELETE' });
+                const data = await response.json();
+                resultado.innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                resultado.innerText = "Erro ao cancelar: " + error;
+            }
+        }
+
+        // Inicializa a sincronização
+        sincronizarTempo();
+    </script>
+</body>
+</html>

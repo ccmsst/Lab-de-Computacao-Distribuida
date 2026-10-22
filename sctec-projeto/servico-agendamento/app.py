@@ -1,6 +1,7 @@
 #Nome: Camila Huang      RA:10419606
 #Nome: Xuanjun Jin          RA:10436456
 
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -10,6 +11,7 @@ import requests
 import time
 
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sctec.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -22,7 +24,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # URL do Serviço Coordenadorr
-COORDENADOR_URL = "http://localhost:3000"
+import os
+COORDENADOR_URL = os.getenv("COORDENADOR_URL", "http://servico-coordenador:3000")
 
 class Agendamento(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -106,5 +109,37 @@ def get_time():
     logger.info("Requisição recebida em GET /time")
     return jsonify({"server_time_utc": datetime.utcnow().isoformat() + "Z"})
 
+# ==========================================
+# EXERCÍCIO 4: Cancelamento de Agendamento
+# ==========================================
+@app.route('/agendamentos/<int:id>', methods=['DELETE'])
+def cancelar_agendamento(id):
+    logger.info(f"Requisição recebida para DELETE /agendamentos/{id}")
+    
+    agendamento = Agendamento.query.get(id)
+    if not agendamento:
+        return jsonify({"error": "NOT_FOUND", "message": "Agendamento não encontrado"}), 404
+    
+    # Altera o status em vez de deletar (soft delete)
+    agendamento.status = "Cancelado"
+    db.session.commit()
+    
+    # Log de Auditoria
+    audit_log = {
+        "timestamp_utc": datetime.utcnow().isoformat() + "Z",
+        "level": "AUDIT",
+        "event_type": "AGENDAMENTO_CANCELADO",
+        "service": "servico-agendamento",
+        "details": {"agendamento_id": id}
+    }
+    logger.warning(json.dumps(audit_log))
+    
+    return jsonify({
+        "message": "Agendamento cancelado com sucesso.",
+        "status": "Cancelado",
+        "_links": {"listar": {"href": "/agendamentos"}}
+    }), 200
+
+
 if __name__ == '__main__':
-    app.run(port=5000, threaded=True)
+    app.run(host='0.0.0.0',port=5000, threaded=True)

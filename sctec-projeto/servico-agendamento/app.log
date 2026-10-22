@@ -1,47 +1,111 @@
-INFO:2026-10-21 17:54:24,296:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+INFO:2026-10-22 16:36:29,510:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-INFO:2026-10-21 17:54:24,296:[33mPress CTRL+C to quit[0m
-INFO:2026-10-21 17:54:45,006:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,010:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,008:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,010:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,014:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,017:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,019:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,013:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,009:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,021:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,023:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,024:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,027:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,027:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,024:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,029:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,031:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,029:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,031:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,031:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,287:Lock adquirido com sucesso para telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,287:Iniciando verificação de conflito no BD
-INFO:2026-10-21 17:54:45,289:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,290:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,291:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,291:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,297:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,298:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,303:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,304:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,306:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,306:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,307:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,307:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,308:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,308:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,311:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,312:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,313:Falha ao adquirir lock, recurso ocupado.
-INFO:2026-10-21 17:54:45,314:127.0.0.1 - - [21/Oct/2026 17:54:45] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
-INFO:2026-10-21 17:54:45,787:Salvando novo agendamento no BD
-WARNING:2026-10-21 17:54:45,806:{"timestamp_utc": "2026-10-21T17:54:45.803851Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CRIADO", "service": "servico-agendamento", "details": {"agendamento_id": 42, "recurso": "telescopio_1_2025-12-01T03:00:00Z"}}
-INFO:2026-10-21 17:54:45,806:Liberando lock para o recurso telescopio_1_2025-12-01T03:00:00Z
-INFO:2026-10-21 17:54:45,810:127.0.0.1 - - [21/Oct/2026 17:54:45] "[35m[1mPOST /agendamentos HTTP/1.1[0m" 201 -
+INFO:2026-10-22 16:36:29,510:[33mPress CTRL+C to quit[0m
+INFO:2026-10-22 16:37:05,124:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,124:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,126:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,129:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,126:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,130:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,131:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,136:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,138:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,138:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,139:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,141:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,141:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,143:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,145:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,147:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,146:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,148:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,146:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,149:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,297:Lock adquirido com sucesso para telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,297:Iniciando verificação de conflito no BD
+INFO:2026-10-22 16:37:05,298:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,299:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,306:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,308:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,312:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,313:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,315:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,317:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,318:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,318:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,325:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,326:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,329:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,329:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,333:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,337:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,338:Falha ao adquirir lock, recurso ocupado.
+INFO:2026-10-22 16:37:05,339:127.0.0.1 - - [22/Oct/2026 16:37:05] "[31m[1mPOST /agendamentos HTTP/1.1[0m" 409 -
+INFO:2026-10-22 16:37:05,797:Salvando novo agendamento no BD
+WARNING:2026-10-22 16:37:05,807:{"timestamp_utc": "2026-10-22T16:37:05.805454Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CRIADO", "service": "servico-agendamento", "details": {"agendamento_id": 43, "recurso": "telescopio_1_2025-12-01T03:00:00Z"}}
+INFO:2026-10-22 16:37:05,807:Liberando lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 16:37:05,811:127.0.0.1 - - [22/Oct/2026 16:37:05] "[35m[1mPOST /agendamentos HTTP/1.1[0m" 201 -
+INFO:2026-10-22 16:41:17,516:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:2026-10-22 16:41:17,517:[33mPress CTRL+C to quit[0m
+INFO:2026-10-22 16:50:44,432:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:2026-10-22 16:50:44,432:[33mPress CTRL+C to quit[0m
+INFO:2026-10-22 16:51:00,098:127.0.0.1 - - [22/Oct/2026 16:51:00] "GET /static/index.html HTTP/1.1" 200 -
+INFO:2026-10-22 16:51:00,989:127.0.0.1 - - [22/Oct/2026 16:51:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:2026-10-22 16:57:44,018:127.0.0.1 - - [22/Oct/2026 16:57:44] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:2026-10-22 17:02:19,099:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:2026-10-22 17:02:19,099:[33mPress CTRL+C to quit[0m
+INFO:2026-10-22 17:02:33,476:127.0.0.1 - - [22/Oct/2026 17:02:33] "GET /static/index.html HTTP/1.1" 200 -
+INFO:2026-10-22 17:02:34,079:Requisição recebida em GET /time
+INFO:2026-10-22 17:02:34,080:127.0.0.1 - - [22/Oct/2026 17:02:34] "GET /time HTTP/1.1" 200 -
+INFO:2026-10-22 17:02:36,428:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:02:36,428:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:02:36,433:Lock adquirido com sucesso para telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:02:36,433:Iniciando verificação de conflito no BD
+INFO:2026-10-22 17:02:36,933:Salvando novo agendamento no BD
+WARNING:2026-10-22 17:02:36,952:{"timestamp_utc": "2026-10-22T17:02:36.949469Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CRIADO", "service": "servico-agendamento", "details": {"agendamento_id": 44, "recurso": "telescopio_1_2025-12-01T03:00:00Z"}}
+INFO:2026-10-22 17:02:36,952:Liberando lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:02:36,959:127.0.0.1 - - [22/Oct/2026 17:02:36] "[35m[1mPOST /agendamentos HTTP/1.1[0m" 201 -
+INFO:2026-10-22 17:03:04,436:Requisição recebida para DELETE /agendamentos/44
+WARNING:2026-10-22 17:03:04,444:{"timestamp_utc": "2026-10-22T17:03:04.444398Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CANCELADO", "service": "servico-agendamento", "details": {"agendamento_id": 44}}
+INFO:2026-10-22 17:03:04,445:127.0.0.1 - - [22/Oct/2026 17:03:04] "DELETE /agendamentos/44 HTTP/1.1" 200 -
+INFO:2026-10-22 17:03:23,693:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:03:23,694:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:03:23,696:Lock adquirido com sucesso para telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:03:23,696:Iniciando verificação de conflito no BD
+INFO:2026-10-22 17:03:24,197:Salvando novo agendamento no BD
+WARNING:2026-10-22 17:03:24,201:{"timestamp_utc": "2026-10-22T17:03:24.201408Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CRIADO", "service": "servico-agendamento", "details": {"agendamento_id": 45, "recurso": "telescopio_1_2025-12-01T03:00:00Z"}}
+INFO:2026-10-22 17:03:24,202:Liberando lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:03:24,205:127.0.0.1 - - [22/Oct/2026 17:03:24] "[35m[1mPOST /agendamentos HTTP/1.1[0m" 201 -
+INFO:2026-10-22 17:04:11,982:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:04:11,982:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:04:11,985:Lock adquirido com sucesso para telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:04:11,985:Iniciando verificação de conflito no BD
+INFO:2026-10-22 17:04:12,485:Salvando novo agendamento no BD
+WARNING:2026-10-22 17:04:12,491:{"timestamp_utc": "2026-10-22T17:04:12.490433Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CRIADO", "service": "servico-agendamento", "details": {"agendamento_id": 46, "recurso": "telescopio_1_2025-12-01T03:00:00Z"}}
+INFO:2026-10-22 17:04:12,491:Liberando lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:04:12,494:127.0.0.1 - - [22/Oct/2026 17:04:12] "[35m[1mPOST /agendamentos HTTP/1.1[0m" 201 -
+INFO:2026-10-22 17:05:45,996:Requisição recebida para DELETE /agendamentos/46
+WARNING:2026-10-22 17:05:46,001:{"timestamp_utc": "2026-10-22T17:05:46.001332Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CANCELADO", "service": "servico-agendamento", "details": {"agendamento_id": 46}}
+INFO:2026-10-22 17:05:46,001:127.0.0.1 - - [22/Oct/2026 17:05:46] "DELETE /agendamentos/46 HTTP/1.1" 200 -
+INFO:2026-10-22 17:07:48,244:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:07:48,244:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:07:48,247:Lock adquirido com sucesso para telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:07:48,247:Iniciando verificação de conflito no BD
+INFO:2026-10-22 17:07:48,747:Salvando novo agendamento no BD
+WARNING:2026-10-22 17:07:48,753:{"timestamp_utc": "2026-10-22T17:07:48.752804Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CRIADO", "service": "servico-agendamento", "details": {"agendamento_id": 47, "recurso": "telescopio_1_2025-12-01T03:00:00Z"}}
+INFO:2026-10-22 17:07:48,753:Liberando lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:07:48,756:127.0.0.1 - - [22/Oct/2026 17:07:48] "[35m[1mPOST /agendamentos HTTP/1.1[0m" 201 -
+INFO:2026-10-22 17:08:14,793:Requisição recebida para POST /agendamentos. Recurso: telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:08:14,793:Tentando adquirir lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:08:14,797:Lock adquirido com sucesso para telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:08:14,797:Iniciando verificação de conflito no BD
+INFO:2026-10-22 17:08:15,297:Salvando novo agendamento no BD
+WARNING:2026-10-22 17:08:15,303:{"timestamp_utc": "2026-10-22T17:08:15.302449Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CRIADO", "service": "servico-agendamento", "details": {"agendamento_id": 48, "recurso": "telescopio_1_2025-12-01T03:00:00Z"}}
+INFO:2026-10-22 17:08:15,303:Liberando lock para o recurso telescopio_1_2025-12-01T03:00:00Z
+INFO:2026-10-22 17:08:15,307:127.0.0.1 - - [22/Oct/2026 17:08:15] "[35m[1mPOST /agendamentos HTTP/1.1[0m" 201 -
+INFO:2026-10-22 17:09:32,759:Requisição recebida para DELETE /agendamentos/48
+WARNING:2026-10-22 17:09:32,765:{"timestamp_utc": "2026-10-22T17:09:32.765263Z", "level": "AUDIT", "event_type": "AGENDAMENTO_CANCELADO", "service": "servico-agendamento", "details": {"agendamento_id": 48}}
+INFO:2026-10-22 17:09:32,765:127.0.0.1 - - [22/Oct/2026 17:09:32] "DELETE /agendamentos/48 HTTP/1.1" 200 -
