@@ -1,5 +1,6 @@
 # Contrato da API REST - SCTEC
-
+Nome: Camila Huang      RA:10419606
+Nome: Xuanjun Jin          RA:10436456
 ## HATEOAS
 Todas as respostas incluem links para ações futuras.
 

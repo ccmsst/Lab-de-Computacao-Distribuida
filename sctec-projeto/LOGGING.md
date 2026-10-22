@@ -1,5 +1,6 @@
 # Design de Logs - SCTEC
-
+Nome: Camila Huang      RA:10419606
+Nome: Xuanjun Jin          RA:10436456
 ## 1. Log de Auditoria (JSON)
 ```json
 {

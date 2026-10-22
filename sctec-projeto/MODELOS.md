@@ -1,5 +1,7 @@
-# Modelos de Dados - SCTEC
 
+# Modelos de Dados - SCTEC
+Nome: Camila Huang      RA:10419606
+Nome: Xuanjun Jin          RA:10436456
 ## 1. Entidade: Cientista (`Cientista`)
 Representa o usuário que solicita tempo de observação.
 

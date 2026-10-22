@@ -1,3 +1,5 @@
+#Nome: Camila Huang      RA:10419606
+#Nome: Xuanjun Jin          RA:10436456
 import requests
 import concurrent.futures
 import time

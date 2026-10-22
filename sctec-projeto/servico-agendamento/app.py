@@ -1,3 +1,6 @@
+#Nome: Camila Huang      RA:10419606
+#Nome: Xuanjun Jin          RA:10436456
+
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
